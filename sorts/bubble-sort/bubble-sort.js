@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-var index_1 = require("./../index");
+var index_1 = require("../../index");
 var bubbleSort = function (arr) {
     for (var i = arr.length - 1; i > 0; i--) {
         for (var j = 0; j < i; j++) {

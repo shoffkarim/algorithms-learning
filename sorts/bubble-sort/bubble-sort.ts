@@ -1,4 +1,4 @@
-import {arr, comparator, swap} from './../index'
+import {arr, comparator, swap} from '../../index'
 
 const bubbleSort = (arr: Array<number>) => {
     for(let i = arr.length - 1; i > 0; i--){
