@@ -35,4 +35,5 @@ const theSameSums = () => {
 
 
 };
+
 console.log(theSameSums());
