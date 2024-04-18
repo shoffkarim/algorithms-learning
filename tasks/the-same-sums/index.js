@@ -36,3 +36,5 @@ const theSameSums = () => {
 
 };
 console.log(theSameSums());
+
+// https://www.notion.so/shoff/7005f1cf8ab441438c395c51ab7fb2dc?pvs=4
