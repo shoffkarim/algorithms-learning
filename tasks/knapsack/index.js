@@ -23,7 +23,7 @@ const knapsack = (w, weight, profit, n) => {
 
 
 const knapsackDp = (w, weight, profit, n, dp) => {
-    console.log(dp)
+
     if(n === 0 || w=== 0) {
         return 0
     }
@@ -40,7 +40,11 @@ const knapsackDp = (w, weight, profit, n, dp) => {
 
 }
 
+const main = () => {
+    const dp = new Array(n + 1).fill(-1).map((el) => new Array(w + 1).fill(-1))
 
+    return knapsackDp(w, weight, profit, n, dp)
+}
 
 const knapsackBottomUp = () => {
     const profit = [60, 100, 120]
@@ -62,10 +66,28 @@ const knapsackBottomUp = () => {
     return dp[n][w]
 }
 
-const main = () => {
-    const dp = new Array(n + 1).fill(-1).map((el) => new Array(w + 1).fill(-1))
 
-    return knapsackDp(w, weight, profit, n, dp)
+const knapsackSimpleDp = () => {
+    const profit = [60, 100, 120]
+    const weight = [10, 20, 30]
+    const w = 50
+    const n = 3
+
+    const dp = new Array(w + 1).fill(0)
+
+    for(let i = 1; i < n + 1; i++) {
+        for(let j = w; j >= 0; j--) {
+            if(weight[i - 1] <= j) {
+                dp[j] = Math.max(dp[j], dp[j - weight[i - 1]] + profit[i - 1])
+            }
+        }
+    }
+
+    return dp
 }
 
-console.log(knapsackBottomUp())
+
+console.log(knapsackSimpleDp())
+
+
+// https://www.notion.so/shoff/168280554fd04c6c9e48f4292b8fa468?pvs=4
