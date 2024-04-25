@@ -27,7 +27,7 @@ const fibonacciIterative = (n) => {
     return cur
 }
 
-console.log(fibonacciIterative(3))
+console.log(fibonacciIterative(200))
 // https://www.notion.so/shoff/662e39f6e3fd4b17923350295330ba5c?pvs=4
 // https://www.notion.so/shoff/ca6c9f8e14ca49d0bc446c0c77d20c92?pvs=4
 // https://www.notion.so/shoff/3426879007e047739731cc5f2aab3042?pvs=4
