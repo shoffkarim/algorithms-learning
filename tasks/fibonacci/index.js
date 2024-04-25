@@ -8,8 +8,26 @@ const fibonacci = (n) => {
 
 }
 
-console.log(fibonacci(13))
+// console.log(fibonacci(13))
 
+const fibonacciIterative = (n) => {
+    if (n <= 1) {
+        return n
+    }
 
+    let prev = 0
+    let cur = 1
+
+    for(let i = 0; i < n - 1; i++) {
+        let temp = prev
+        prev = cur
+        cur = temp + prev
+    }
+
+    return cur
+}
+
+console.log(fibonacciIterative(3))
 // https://www.notion.so/shoff/662e39f6e3fd4b17923350295330ba5c?pvs=4
 // https://www.notion.so/shoff/ca6c9f8e14ca49d0bc446c0c77d20c92?pvs=4
+// https://www.notion.so/shoff/3426879007e047739731cc5f2aab3042?pvs=4
